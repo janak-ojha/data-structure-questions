@@ -1,7 +1,7 @@
 public class FInding_sub_Array_ofarray {
     public static void subar(int n[])
     {
-        for(int i=0;i<n.length;i++)
+        for(int i=1;i<n.length;i++)
         {
             for(int j=i;j<n.length;j++)
             {
