@@ -22,7 +22,7 @@ public class All_divisor_of_n {
                 System.out.println(i);
             }
         }
-        for(int j=i;j>=1;j++)
+        for(int j=i;j<=n;j++)
         {
             if(n%j==0 || j==n/j)
             {
