@@ -72,11 +72,11 @@ public class finding_prime {
     public static void seiveprime(int n)
     {
         boolean [] prime=new boolean[n+1];
-        for(int i=2;i<=n;i++)
+        for(int i=2;i*i<=n;i++)
         {
             if(prime[i]==false)
             {
-                for(int j=i*2;j<=n;j=j+i)
+                for(int j=i*i;j<=n;j=j+i)
                 {
                     prime[j]=true;
                 }
