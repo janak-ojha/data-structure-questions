@@ -4,24 +4,24 @@ public class FInding_lcm {
     //normal brute force apporach
     public static int lcm(int a,int b)
     {
-        int res=0;
+        int max=0;
         if(a>b)
         {
-            res=a;
+            max=a;
         }
         else
         {
-            res=b;
+            max=b;
         }
         while(true)
         {
-            if(res%a==0 && res%b==0)
+            if(max%a==0 && max%b==0)
             {
                 break;
             }
-            res++;
+            max++;
         }
-        return res;
+        return max;
     }
 
     //by euclidean approach
