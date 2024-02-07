@@ -1,5 +1,5 @@
 public class Fibonacci_series {
-    static int a=0,b=1,c;
+    static int a=1,b=1,c;
     public static void fibbo(int n)
     {
         if(n>=1)
