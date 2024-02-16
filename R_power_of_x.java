@@ -18,8 +18,9 @@ public class R_power_of_x {
         if(y%2==0)
         {
             long res=poe(x, y/2);
+            return res*res;
         }
-        return poe(x, y/2)*x;
+        return poe(x, y-1)*x;
     }
     public static void main(String[] args) {
         System.out.println(pow(5,3));
