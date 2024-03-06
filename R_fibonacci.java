@@ -1,14 +1,26 @@
 public class R_fibonacci {
-    static int fibonacci(int n)
-    {
-        if(n==1||n==2){
-            return 1;
-        }
-        return fibonacci(n-1)+fibonacci(n-2);
-    }
-    public static void main(String[] args) {
+    
+
         
-      System.out.println(  fibonacci(10));
+        static void fib(int a,int b,int temp,int i,int n)
+        {
+            if (i==n+1)
+            {
+                return ;
+            }
+             temp=b;
+             System.out.println(a);
+            b=a+b;
+            
+            a=temp;
+            fib(a, b, temp, i+1, n);
+        }
+    
+        public static void main(String[] args) {
+            fib(0, 1, 0, 1, 10);
+            
+        }
     }
     
-}
+    
+
