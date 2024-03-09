@@ -1,37 +1,45 @@
 public class eg {
+    static boolean ispaline(String arr)
+    {
+       int  l=arr.length()-1;
+       for(int s=0;s<l;s++)
+       {
+        if(arr.charAt(s)!=arr.charAt(l))
+        {
+            return false;
+        }
+        l--;
+       }
+       return true;
+       
+      
+       
+          
+          
+    }
+   static String revers(String arr)
+   {
+    char[] charArray=arr.toCharArray();
+    int a=0;
+    int b=arr.length()-1;
+    while (a<b) {
+        char temp=charArray[a];
+        charArray[a]=charArray[b];
+        charArray[b]=temp;
+        a++;
+        b--;
+        
+
+        
+    }
+    return new String(charArray);
+   
+    
+   }
+
+    
     
   
-
-  static void fibbo(int n){
-    int a=0;
-    
-    int b=1;
-    
-    for(int i=0;i<=n;i++)
-    {    
-        System.out.println(a);
-         int  c=a+b;
-        
-         a=b;
-         b=c;
-         
-
-
-    }
-  }
-
-  static int fibboe(int n) {
-    if (n == 0) {
-        return 0;
-    }
-
-    if (n == 1 || n == 2) {
-        return 1;
-    }
-
-    return fibboe(n - 1) + fibboe(n - 2);
-}
-
 
 
   
@@ -43,11 +51,14 @@ public class eg {
  
 
     public static void main(String[] args) {
-       int n=5;
-    
+       
+       String arr="janak";
+       System.out.println(ispaline(arr));
+       System.out.println(revers(arr));
+       
         
 
-        System.out.println(fibboe(n));
+       
         
         
      
