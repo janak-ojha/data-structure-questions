@@ -19,7 +19,7 @@ public class All_divisor_of_n {
         {
             if(n%i==0)
             {
-                System.out.println(i);
+                System.out.println("the value si"i);
             }
         }
         for(int j=i;j<=n;j++)

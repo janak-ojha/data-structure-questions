@@ -40,7 +40,7 @@ public class A_max_sum_subarray {
         int arr[]={-1,3,4,-2};
         System.out.println(subar(arr));
         System.out.println(maxs(arr));
-        System.out.println("the values is"+maxs(arr));
+        System.out.println("the values is the"+maxs(arr));
         
     }
     
