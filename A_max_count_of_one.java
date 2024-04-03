@@ -50,7 +50,7 @@ public class A_max_count_of_one {
     }
     public static void main(String[] args) {
         int arr[]={0,1,1,0,1,0,1,1,1,1,0};
-        System.out.println("the max count "+max_co(arr));
+        System.out.println("the max "+max_co(arr));
         System.out.println(max_Cou(arr));
         
     }
