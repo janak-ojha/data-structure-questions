@@ -1,72 +1,27 @@
-public class eg {
-    static boolean ispaline(String arr)
+public class eg{
+    static boolean Issorte(int arr[])
     {
-       int  l=arr.length()-1;
-       for(int s=0;s<l;s++)
-       {
-        if(arr.charAt(s)!=arr.charAt(l))
+        for(int i=1;i<arr.length;i++)
         {
-            return false;
+            if(arr[i]<arr[i-1])
+            {
+                return false;
+            }
+
         }
-        l--;
-       }
-       return true;
-       
-      
-       
-          
-          
+        return true;
     }
-   static String revers(String arr)
-   {
-    char[] charArray=arr.toCharArray();
-    int a=0;
-    int b=arr.length()-1;
-    while (a<b) {
-        char temp=charArray[a];
-        charArray[a]=charArray[b];
-        charArray[b]=temp;
-        a++;
-        b--;
-        
-
-        
-    }
-    return new String(charArray);
-   
-    
-   }
-
-    
-    
-  
-
-
-  
-
-    
-    
- 
- 
- 
-
     public static void main(String[] args) {
-       
-       String arr="janak";
-       System.out.println(ispaline(arr));
-       System.out.println(revers(arr));
-       
-        
-
-       
-        
-        
-     
-        
-      
-        
-
+        int arr[]={1,2,3,4,5};
+        System.out.println(Issorte(arr));
+        if(Issorte(arr))
+        {
+            System.out.println("it is sorted");
+        }
+        else{
+            System.out.println("is not sorted");
+        }
         
     }
-    
+
 }
