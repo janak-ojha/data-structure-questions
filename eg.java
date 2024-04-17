@@ -1,27 +1,21 @@
 public class eg{
-    static boolean Issorte(int arr[])
+    static int linear_search(int arr[],int key)
     {
-        for(int i=1;i<arr.length;i++)
+        for(int i=0;i<arr.length;i++)
         {
-            if(arr[i]<arr[i-1])
+            if(arr[i]==key)
             {
-                return false;
+                return i;
             }
+        }
+        return -1;
 
-        }
-        return true;
     }
-    public static void main(String[] args) {
-        int arr[]={1,2,3,4,5};
-        System.out.println(Issorte(arr));
-        if(Issorte(arr))
-        {
-            System.out.println("it is sorted");
-        }
-        else{
-            System.out.println("is not sorted");
-        }
-        
-    }
+ public static void main(String[] args) {
+    int arr[]={1,3,2,5,4};
+    int key=5;
+    System.out.println( "element "+key+" is found at index:"+linear_search(arr, key));
+    
+ }
 
 }
