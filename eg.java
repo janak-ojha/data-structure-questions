@@ -1,20 +1,32 @@
 public class eg{
-    static int linear_search(int arr[],int key)
+    static int binary_search(int arr[],int key)
     {
-        for(int i=0;i<arr.length;i++)
+        int start=0;
+        int last=arr.length-1;
+
+        while(start<=last)
         {
-            if(arr[i]==key)
+            int mid=(start+last)/2;
+            if(key>arr[mid])
             {
-                return i;
+                start=mid+1;
+                
+            }
+            else if(key<arr[mid])
+            {
+                last=mid-1;
+            }
+            else if(key==arr[mid]){
+                return mid;
             }
         }
         return -1;
-
     }
+   
  public static void main(String[] args) {
-    int arr[]={1,3,2,5,4};
-    int key=5;
-    System.out.println( "element "+key+" is found at index:"+linear_search(arr, key));
+    int arr[]={1,2,3,4,9,11,15};
+    int key=15;
+    System.out.println("the element  "+key+" is at "+ binary_search(arr, key));
     
  }
 
