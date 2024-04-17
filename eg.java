@@ -1,32 +1,29 @@
 public class eg{
-    static int binary_search(int arr[],int key)
+    static int binary_search(int arr[],int key,int low,int high)
     {
-        int start=0;
-        int last=arr.length-1;
-
-        while(start<=last)
+        if(low <= high)
         {
-            int mid=(start+last)/2;
-            if(key>arr[mid])
-            {
-                start=mid+1;
-                
-            }
-            else if(key<arr[mid])
-            {
-                last=mid-1;
-            }
-            else if(key==arr[mid]){
-                return mid;
-            }
+            int mid = (low+high)/1;
+        
+        if(arr[mid]==key)
+        {
+            return mid;
         }
-        return -1;
+        else if(arr[mid]<key)
+        {
+            return binary_search(arr, key, mid+1, high);
+        }
+        else{
+            return binary_search(arr, key, low, mid-1);
+        }
     }
+    return -1;
+}
    
  public static void main(String[] args) {
     int arr[]={1,2,3,4,9,11,15};
     int key=15;
-    System.out.println("the element  "+key+" is at "+ binary_search(arr, key));
+    System.out.println("the element  "+key+" is at "+ binary_search(arr, key, 0, arr.length-1));
     
  }
 
