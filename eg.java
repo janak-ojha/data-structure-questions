@@ -1,4 +1,6 @@
 public class eg{
+
+   
   static int a=1;
   static int b=1;
   static int c;

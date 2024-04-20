@@ -1,6 +1,7 @@
 public class Selection_sort {
     static void sele(int arr[])
     {
+        //time complexity order of O(n)2
         int n=arr.length;
         
         for(int i=0;i<n-1;i++)
