@@ -1,28 +1,23 @@
 public class eg{
 
    
-  static int a=1;
-  static int b=1;
-  static int c;
-   static void fibonacci(int n)
-   {
-      for(int i=0;i<=n;i++)
-      {
-         c=a+b;
-         System.out.print(c+" ");
-         a=b;
-         b=c;
-      }
-      
+ static void fact(int n)
+ { 
+   int res=1;
+   for(int i=1;i<=5;i++)
 
+   {
+      res=i*res;
    }
+   System.out.println(res);
+ }
+  
     
   
    
  public static void main(String[] args) {
-   System.out.print(a+" ");
-   System.out.print(b+" ");
-fibonacci(5);
+   fact(5);
+  
     
  }
 
